@@ -20,6 +20,11 @@ ApplicationWindow {
         window.x = (Screen.width/2)-(window.width/2)
         window.y = (Screen.height/2)-(window.height/2)
     }
+    FontLoader {
+        id: robotoLight
+        source: "../Font/Roboto-Light.ttf"
+    }
+
     property point startMousePos
     property point startWindowPos
     property size startWindowSize
@@ -81,23 +86,71 @@ ApplicationWindow {
                 anchors.rightMargin: 8
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: 8
-                Image {
+                Rectangle {
                     width: 24
                     height: width
-                    source: "../Icons/min24.png"
-                    antialiasing: true
+                    color: window.windowColor
+                    Text {
+                        color: "white"
+                        text: "_"
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.centerIn: parent
+                        font.family: robotoLight.name
+                        font.pixelSize: 20
+
+                    }
+                    MouseArea {
+                        anchors.fill: parent
+                        onPressed: parent.color = window.accentColor
+                        onReleased: parent.color = window.windowColor
+                    }
                 }
-                Image {
+                Rectangle {
                     width: 24
                     height: width
-                    source: "../Icons/max24.png"
-                    antialiasing: true
+                    color: window.windowColor
+                    Item {
+                        anchors.centerIn: parent
+                        Rectangle {
+                            x: ((parent.width/2)-(width/2))+1
+                            y: ((parent.height/2)-(height/2))-1
+                            width: 10
+                            height: width
+                            color: "transparent"
+                            border.color: "white"
+                        }
+                        Rectangle {
+                            x: ((parent.width/2)-(width/2))-2
+                            y: ((parent.height/2)-(height/2))+2
+                            width: 10
+                            height: width
+                            color: window.windowColor
+                            border.color: "white"
+                        }
+                    }
+                    MouseArea {
+                        anchors.fill: parent
+                        onPressed: parent.color = window.accentColor
+                        onReleased: parent.color = window.windowColor
+                    }
                 }
-                Image {
+                Rectangle {
                     width: 24
                     height: width
-                    source: "../Icons/close24.png"
-                    antialiasing: true
+                    color: window.windowColor
+                    Text {
+                        color: "white"
+                        text: "x"
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.centerIn: parent
+                        font.family: robotoLight.name
+                        font.pixelSize: 20
+                    }
+                    MouseArea {
+                        anchors.fill: parent
+                        onPressed: parent.color = window.accentColor
+                        onReleased: parent.color = window.windowColor
+                    }
                 }
             }
         }
