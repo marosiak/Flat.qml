@@ -61,6 +61,45 @@ ApplicationWindow {
             width: parent.width
             height: 50
             color: window.accentColor
+            MouseArea {
+                anchors.fill: parent
+                property real lastMouseX: 0
+                property real lastMouseY: 0
+                onPressed: {
+                    lastMouseX = mouseX
+                    lastMouseY = mouseY
+                }
+                onMouseXChanged: {
+                    window.x += (mouseX - lastMouseX)
+                }
+                onMouseYChanged: {
+                    window.y += (mouseY - lastMouseY)
+                }
+            }
+            Row {
+                anchors.right: parent.right
+                anchors.rightMargin: 8
+                anchors.verticalCenter: parent.verticalCenter
+                spacing: 8
+                Image {
+                    width: 24
+                    height: width
+                    source: "../Icons/min24.png"
+                    antialiasing: true
+                }
+                Image {
+                    width: 24
+                    height: width
+                    source: "../Icons/max24.png"
+                    antialiasing: true
+                }
+                Image {
+                    width: 24
+                    height: width
+                    source: "../Icons/close24.png"
+                    antialiasing: true
+                }
+            }
         }
 
     }

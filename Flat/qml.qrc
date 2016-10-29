@@ -3,5 +3,12 @@
         <file>main.qml</file>
         <file>Flat/Component/Window.qml</file>
         <file>main.cpp</file>
+        <file>Flat/Icons/close256.png</file>
+        <file>Flat/Icons/max256.png</file>
+        <file>Flat/Icons/min256.png</file>
+        <file>Flat/Icons/close24.png</file>
+        <file>Flat/Icons/max24.png</file>
+        <file>Flat/Icons/min24.png</file>
+        <file>Flat/Font/Roboto-Light.ttf</file>
     </qresource>
 </RCC>
