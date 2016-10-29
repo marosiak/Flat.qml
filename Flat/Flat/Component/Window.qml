@@ -75,10 +75,14 @@ ApplicationWindow {
                     lastMouseY = mouseY
                 }
                 onMouseXChanged: {
-                    window.x += (mouseX - lastMouseX)
+                    if(window.width != Screen.width && window.height != Screen.height){
+                        window.x += (mouseX - lastMouseX)
+                    }
                 }
                 onMouseYChanged: {
-                    window.y += (mouseY - lastMouseY)
+                    if(window.width != Screen.width && window.height != Screen.height){
+                        window.y += (mouseY - lastMouseY)
+                    }
                 }
             }
             Row {
@@ -102,7 +106,10 @@ ApplicationWindow {
                     MouseArea {
                         anchors.fill: parent
                         onPressed: parent.color = window.accentColor
-                        onReleased: parent.color = window.windowColor
+                        onReleased: {
+                            parent.color = window.windowColor
+                            window.showMinimized()
+                        }
                     }
                 }
                 Rectangle {
@@ -120,6 +127,7 @@ ApplicationWindow {
                             border.color: "white"
                         }
                         Rectangle {
+                            id: sec
                             x: ((parent.width/2)-(width/2))-2
                             y: ((parent.height/2)-(height/2))+2
                             width: 10
@@ -129,9 +137,39 @@ ApplicationWindow {
                         }
                     }
                     MouseArea {
+                        id: maximizeMA
                         anchors.fill: parent
-                        onPressed: parent.color = window.accentColor
-                        onReleased: parent.color = window.windowColor
+                        property bool cache: true
+                        property int firstWidth
+                        property int firstHeight
+                        property int firstX
+                        property int firstY
+                        onPressed: {
+                            sec.color = window.accentColor
+                            parent.color = window.accentColor
+                        }
+                        onReleased: {
+                            sec.color = window.windowColor
+                            parent.color = window.windowColor
+
+                            if(cache == true){
+                                firstWidth = window.width
+                                firstHeight = window.height
+                                firstX = window.x
+                                firstY = window.y
+                                window.width = Screen.width
+                                window.height = Screen.height
+                                window.x = 0
+                                window.y = 0
+                                cache = false
+                            } else {
+                                window.width = firstWidth
+                                window.height = firstHeight
+                                window.x = firstX
+                                window.y = firstY
+                                cache = true
+                            }
+                        }
                     }
                 }
                 Rectangle {
@@ -149,7 +187,10 @@ ApplicationWindow {
                     MouseArea {
                         anchors.fill: parent
                         onPressed: parent.color = window.accentColor
-                        onReleased: parent.color = window.windowColor
+                        onReleased: {
+                            parent.color = window.windowColor
+                            Qt.quit()
+                        }
                     }
                 }
             }

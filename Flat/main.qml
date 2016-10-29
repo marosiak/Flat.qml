@@ -6,6 +6,6 @@ import "Flat/Component"
 Window {
     width: 500
     height: 400
-    windowColor: "#34495e"
-    accentColor: "#2c3e50"
+    windowColor: "#e74c3c" // Jasniejszy
+    accentColor: "#c0392b" // Ciemniejszy
 }
