@@ -64,7 +64,7 @@ $(DESTDIR_TARGET):  $(OBJECTS)
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" -o Makefile.Debug ..\Flat\Flat.pro
+	@$(QMAKE) -spec win32-g++ "CONFIG+=qml_debug" "CONFIG+=force_debug_info" "CONFIG+=separate_debug_info" -o Makefile.Debug ..\Flat\Flat.pro
 
 qmake_all: FORCE
 
@@ -97,7 +97,6 @@ debug/qrc_qml.cpp: ../Flat/qml.qrc \
 		../Flat/main.cpp \
 		../Flat/main.qml \
 		../Flat/Flat/Component/Window.qml \
-		../Flat/Flat/Component/subComponents/ResizeWindow.qml \
 		../Flat/Flat/Font/Roboto-Light.ttf \
 		../../../Qt/5.7/mingw53_32/include/QtGui/QGuiApplication \
 		../../../Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \

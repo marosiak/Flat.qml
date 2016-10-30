@@ -29,39 +29,13 @@ ApplicationWindow {
     property point startWindowPos
     property size startWindowSize
 
-    function absoluteMousePos(mouseArea){
+    function absoluteMousePos(mouseArea) {
         var windowAbs = mouseArea.mapToItem(null, mouseArea.mouseX, mouseArea.mouseY)
         return Qt.point(windowAbs.x + window.x,windowAbs.y + window.y)
     }
     header: Item {
         width: parent.width
         height: 60
-        Rectangle {
-            id: topSide
-            width: 5
-            height: 10
-            anchors.right: parent.right
-            anchors.left: parent.left
-            anchors.top: parent.top
-            color: "transparent"
-            MouseArea{
-                id: topArea
-                anchors.fill: parent
-                cursorShape : Qt.SizeVerCursor
-                onPressed: {
-                    startMousePos = absoluteMousePos(topArea)
-                    startWindowPos = Qt.point(window.x, window.y)
-                    startWindowSize = Qt.size(window.width, window.height)
-                }
-                onMouseYChanged: {
-                    var abs = absoluteMousePos(topArea)
-                    var newHeight = Math.max(window.minimumHeight, startWindowSize.height - (abs.y - startMousePos.y))
-                    var newY = startWindowPos.y - (newHeight - startWindowSize.height)
-                    window.y = newY
-                    window.height = newHeight
-                }
-            }
-        }
         Rectangle {
             width: parent.width
             height: 50
@@ -195,11 +169,35 @@ ApplicationWindow {
                 }
             }
         }
-
+        Rectangle {
+            id: topSide
+            width: 5
+            height: 10
+            anchors.right: parent.right
+            anchors.left: parent.left
+            anchors.top: parent.top
+            color: "transparent"
+            MouseArea{
+                id: topArea
+                anchors.fill: parent
+                cursorShape : Qt.SizeVerCursor
+                onPressed: {
+                    startMousePos = absoluteMousePos(topArea)
+                    startWindowPos = Qt.point(window.x, window.y)
+                    startWindowSize = Qt.size(window.width, window.height)
+                }
+                onMouseYChanged: {
+                    var abs = absoluteMousePos(topArea)
+                    var newHeight = Math.max(window.minimumHeight, startWindowSize.height - (abs.y - startMousePos.y))
+                    var newY = startWindowPos.y - (newHeight - startWindowSize.height)
+                    window.y = newY
+                    window.height = newHeight
+                }
+            }
+        }
     }
 
-
-    Rectangle{
+    Rectangle {
         id: bottomSide
         height: 10
         anchors.left: parent.left
@@ -207,13 +205,18 @@ ApplicationWindow {
         anchors.bottom: parent.bottom
         color: "transparent"
         MouseArea {
-            cursorShape : Qt.SizeVerCursor
+            id: bottomArea
             anchors.fill: parent
-            property point lastMousePos: Qt.point(0, 0)
+            cursorShape : Qt.SizeVerCursor
             onPressed: {
-                lastMousePos = Qt.point(mouseX, mouseY);
+                startMousePos = absoluteMousePos(bottomArea)
+                startWindowSize = Qt.size(window.width, window.height)
             }
-            onMouseYChanged: window.height += (mouseY - lastMousePos.y)
+            onMouseYChanged: {
+                var abs = absoluteMousePos(bottomArea)
+                var newHeight = Math.max(window.minimumHeight, startWindowSize.height + (abs.y - startMousePos.y))
+                window.height = newHeight
+            }
         }
     }
     Rectangle {
@@ -254,14 +257,19 @@ ApplicationWindow {
         anchors.right: parent.right
         color: "transparent"
         MouseArea {
+            id: rightArea
             cursorShape : Qt.SizeHorCursor
             anchors.fill: parent
             property point lastMousePos: Qt.point(0, 0)
             onPressed: {
-                lastMousePos = Qt.point(mouseX, mouseY);
+                startMousePos = absoluteMousePos(rightArea)
+                startWindowSize = Qt.size(window.width, window.height)
             }
-            onMouseXChanged: window.width+= (mouseX - lastMousePos.x)
+            onMouseYChanged: {
+                var abs = absoluteMousePos(rightArea)
+                var newWidth = Math.max(window.minimumWidth, startWindowSize.width + (abs.x - startMousePos.x))
+                window.width = newWidth
+            }
         }
     }
 }
-
