@@ -1,3 +1,19 @@
+/*
+Example usage:
+
+Window {
+    id: root                // ==== Always you have to define id as root! ====
+    minimumWidth: 600       // standard is 300
+    minimumHeight: 300      // standard is 300
+    windowColor: "#303F9F"  // brighter
+    accentColor: "#283593"  // darker
+    width: 500
+    height: 400
+}
+
+
+*/
+
 import QtQuick 2.5
 import QtQuick.Controls 2.0
 import QtQuick.Window 2.0
@@ -5,6 +21,11 @@ import QtQuick.Layouts 1.1
 
 
 ApplicationWindow {
+    Timer {
+        id: debugTimer
+        interval: 10; running: false; repeat: false
+    }
+
     property color windowColor: "#34495e"
     property color accentColor: "#2c3e50"
     id: window
@@ -65,6 +86,7 @@ ApplicationWindow {
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: 8
                 Rectangle {
+                    id: minimizeRect
                     width: 24
                     height: width
                     color: window.windowColor
@@ -78,6 +100,7 @@ ApplicationWindow {
 
                     }
                     MouseArea {
+                        id: minimizeMA
                         anchors.fill: parent
                         onPressed: parent.color = window.accentColor
                         onReleased: {
@@ -90,6 +113,7 @@ ApplicationWindow {
                     width: 24
                     height: width
                     color: window.windowColor
+                    id: maxRect
                     Item {
                         anchors.centerIn: parent
                         Rectangle {
@@ -150,6 +174,7 @@ ApplicationWindow {
                     width: 24
                     height: width
                     color: window.windowColor
+                    id: closeRect
                     Text {
                         color: "white"
                         text: "x"

@@ -17,4 +17,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     Flat/Window.qml \
     Flat/Component/Window.qml \
-    Flat/Component/subComponents/ResizeWindow.qml
+    Flat/Component/subComponents/ResizeWindow.qml \
+    Flat/Component/Button.qml
