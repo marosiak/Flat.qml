@@ -5,5 +5,7 @@
         <file>main.cpp</file>
         <file>Flat/Font/Roboto-Light.ttf</file>
         <file>Flat/Component/Button.qml</file>
+        <file>Flat/Component/CheckBox.qml</file>
+        <file>Flat/Component/ComboBox.qml</file>
     </qresource>
 </RCC>

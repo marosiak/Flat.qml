@@ -25,7 +25,6 @@ ApplicationWindow {
         id: debugTimer
         interval: 10; running: false; repeat: false
     }
-
     property color windowColor: "#34495e"
     property color accentColor: "#2c3e50"
     id: window
@@ -38,6 +37,13 @@ ApplicationWindow {
     minimumHeight: 300
     minimumWidth: 300
     Component.onCompleted: {
+        if(window.width < window.minimumWidth){
+            window.width = window.minimumWidth
+        }
+        if(window.height < window.minimumHeight){
+            window.height = window.minimumHeight
+        }
+
         window.x = (Screen.width/2)-(window.width/2)
         window.y = (Screen.height/2)-(window.height/2)
     }

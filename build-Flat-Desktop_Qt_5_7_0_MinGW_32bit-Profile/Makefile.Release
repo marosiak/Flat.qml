@@ -50,7 +50,8 @@ OBJECTS       = release/main.o \
 DIST          = Flat/Window.qml \
 		Flat/Component/Window.qml \
 		Flat/Component/subComponents/ResizeWindow.qml \
-		Flat/Component/Button.qml  ..\Flat\main.cpp
+		Flat/Component/Button.qml \
+		Flat/Component/CheckBox.qml  ..\Flat\main.cpp
 QMAKE_TARGET  = Flat
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Flat.exe
@@ -99,6 +100,7 @@ release/qrc_qml.cpp: ../Flat/qml.qrc \
 		../Flat/main.qml \
 		../Flat/Flat/Component/Button.qml \
 		../Flat/Flat/Component/Window.qml \
+		../Flat/Flat/Component/CheckBox.qml \
 		../Flat/Flat/Font/Roboto-Light.ttf \
 		../../../Qt/5.7/mingw53_32/include/QtGui/QGuiApplication \
 		../../../Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \

@@ -1,3 +1,13 @@
+/*
+Example usage:
+
+Button {
+    buttonText: "My button"
+    onClicked: buttonText = "Good job"
+}
+
+*/
+
 import QtQuick 2.7
 import QtQuick.Controls 2.0
 

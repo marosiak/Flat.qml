@@ -18,4 +18,6 @@ DISTFILES += \
     Flat/Window.qml \
     Flat/Component/Window.qml \
     Flat/Component/subComponents/ResizeWindow.qml \
-    Flat/Component/Button.qml
+    Flat/Component/Button.qml \
+    Flat/Component/CheckBox.qml \
+    Flat/Component/ComboBox.qml
