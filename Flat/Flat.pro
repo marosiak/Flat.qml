@@ -20,4 +20,7 @@ DISTFILES += \
     Flat/Component/subComponents/ResizeWindow.qml \
     Flat/Component/Button.qml \
     Flat/Component/CheckBox.qml \
-    Flat/Component/ComboBox.qml
+    Flat/Component/ComboBox.qml \
+    Flat/Component/ProgressBar.qml \
+    Flat/Component/TextField.qml \
+    Flat/Component/Label.qml

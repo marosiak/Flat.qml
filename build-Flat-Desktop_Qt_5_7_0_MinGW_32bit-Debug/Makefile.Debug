@@ -52,7 +52,10 @@ DIST          = Flat/Window.qml \
 		Flat/Component/subComponents/ResizeWindow.qml \
 		Flat/Component/Button.qml \
 		Flat/Component/CheckBox.qml \
-		Flat/Component/ComboBox.qml  ..\Flat\main.cpp
+		Flat/Component/ComboBox.qml \
+		Flat/Component/ProgressBar.qml \
+		Flat/Component/TextField.qml \
+		Flat/Component/Label.qml  ..\Flat\main.cpp
 QMAKE_TARGET  = Flat
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = Flat.exe
@@ -102,7 +105,10 @@ debug/qrc_qml.cpp: ../Flat/qml.qrc \
 		../Flat/Flat/Component/Button.qml \
 		../Flat/Flat/Component/Window.qml \
 		../Flat/Flat/Component/ComboBox.qml \
+		../Flat/Flat/Component/Label.qml \
+		../Flat/Flat/Component/TextField.qml \
 		../Flat/Flat/Component/CheckBox.qml \
+		../Flat/Flat/Component/ProgressBar.qml \
 		../Flat/Flat/Font/Roboto-Light.ttf \
 		../../../Qt/5.7/mingw53_32/include/QtGui/QGuiApplication \
 		../../../Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \

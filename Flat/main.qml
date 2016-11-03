@@ -4,13 +4,14 @@ import "Flat/Component"
 
 
 Window {
-    id: root                // ==== You have to define it as root! ====
-    minimumWidth: 600       // standard is 300
-    minimumHeight: 300      // standard is 300
+    id: root
+    minimumWidth: 600
+    minimumHeight: 300
     windowColor: "#303F9F"  // brighter
     accentColor: "#283593"  // darker
     width: 500
     height: 400
+    title: "Flat.qml"
     Column {
         x: 5
         spacing: 8
@@ -26,8 +27,8 @@ Window {
             Button {
                 buttonText: "Second Button"
                 onClicked: {
-                    root.windowColor = "#3498db"
-                    root.accentColor = "#2980b9"
+                    root.windowColor = "#37474F"
+                    root.accentColor = "#263238"
                 }
             }
             Button {
@@ -61,6 +62,21 @@ Window {
             }
             CheckBox {
                 text: "test xd"
+            }
+        }
+        Row {
+            spacing: 8
+            Column {
+                spacing: 8
+                ProgressBar {}
+                ProgressBar {value: 0.8}
+            }
+            Column {
+                Label {
+                    text: "This is Label"
+                }
+
+                TextField {}
             }
         }
     }

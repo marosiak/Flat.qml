@@ -18,6 +18,7 @@ import QtQuick 2.5
 import QtQuick.Controls 2.0
 import QtQuick.Window 2.0
 import QtQuick.Layouts 1.1
+import "../Component"
 
 
 ApplicationWindow {
@@ -32,6 +33,7 @@ ApplicationWindow {
     width:  600
     height:  400
     color: windowColor
+
     title: "Your Title"
     flags: Qt.FramelessWindowHint | Qt.Window
     minimumHeight: 300
@@ -86,6 +88,7 @@ ApplicationWindow {
                     }
                 }
             }
+
             Row {
                 anchors.right: parent.right
                 anchors.rightMargin: 8
@@ -198,6 +201,14 @@ ApplicationWindow {
                         }
                     }
                 }
+            }
+            Label {
+                width: 100
+                height: 20
+                text: window.title
+                font.pixelSize: 16
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
             }
         }
         Rectangle {
