@@ -10,5 +10,6 @@
         <file>Flat/Component/ProgressBar.qml</file>
         <file>Flat/Component/TextField.qml</file>
         <file>Flat/Component/Label.qml</file>
+        <file>Flat/Component/Popup.qml</file>
     </qresource>
 </RCC>

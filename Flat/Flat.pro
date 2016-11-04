@@ -23,4 +23,5 @@ DISTFILES += \
     Flat/Component/ComboBox.qml \
     Flat/Component/ProgressBar.qml \
     Flat/Component/TextField.qml \
-    Flat/Component/Label.qml
+    Flat/Component/Label.qml \
+    Flat/Component/Popup.qml

@@ -91,8 +91,6 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_bluetooth.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_charts.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_charts_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_clucene_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_concurrent.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_concurrent_private.pri \
@@ -103,8 +101,6 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_designer.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_designer_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gamepad.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gamepad_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gui.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gui_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_help.pri \
@@ -129,8 +125,6 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_positioning_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_printsupport.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_purchasing.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_purchasing_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_qml.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_qml_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_qmldebug_private.pri \
@@ -146,16 +140,8 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_quickwidgets.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_script.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_script_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scripttools.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scripttools_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scxml.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scxml_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_sensors.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialbus.pri \
-		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialbus_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialport.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialport_private.pri \
 		../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_sql.pri \
@@ -245,8 +231,6 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_bluetooth.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_bluetooth_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_bootstrap_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_charts.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_charts_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_clucene_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_concurrent.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_concurrent_private.pri:
@@ -257,8 +241,6 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_designer.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_designer_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_designercomponents_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gamepad.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gamepad_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gui.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_gui_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_help.pri:
@@ -283,8 +265,6 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_positioning_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_printsupport.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_purchasing.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_purchasing_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_qml.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_qml_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_qmldebug_private.pri:
@@ -300,16 +280,8 @@ Makefile: ../Flat/Flat.pro ../../../Qt/5.7/mingw53_32/mkspecs/win32-g++/qmake.co
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_quickwidgets.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_script.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_script_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scripttools.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scripttools_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scxml.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_scxml_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_sensors.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_sensors_private.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialbus.pri:
-../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialbus_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialport.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_serialport_private.pri:
 ../../../Qt/5.7/mingw53_32/mkspecs/modules/qt_lib_sql.pri:

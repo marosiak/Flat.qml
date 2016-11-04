@@ -77,6 +77,25 @@ Window {
                 }
 
                 TextField {}
+                Button {
+                    buttonText: "open popup"
+                    onClicked: popup.open()
+                }
+            }
+        }
+    }
+    Popup {
+        id: popup
+        Column {
+            anchors.centerIn: parent
+            width: parent.width-16
+            height: parent.height-16
+            Label {
+                text: "Lorem Ipsum bla bla test"
+            }
+            Button {
+                buttonText: "ok"
+                onClicked: popup.close()
             }
         }
     }
